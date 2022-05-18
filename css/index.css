@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-vioCla: #4618ac;
+    --color-vioFuer: #311178;
+    --color-vioFF: #230f52;
+}
+
+/* CONTENEDOR VA EL GRID */
+
+.contenedor{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;    /*TERMINARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR*/
+    grid-template-rows: repeat(6, max-content) ;
+    grid-template-areas: 
+    "nav"
+    "slider"
+    "botones"
+    "juegos"
+    "contacto"
+    "footer";
+}
+
+header{
+    width: 100%;
+}
+/*------------------------------------------------------------NAV*/
+.nav{
+    width: 90%;
+    min-height: 70px;
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: nav;
+}
+
+.nav .nav-titulo{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+.nav .nav-buscador{
+    width: 30%;
+    height: 20px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-vioCla);
+}
+
+.nav .nav-buscador p{
+    color: #707070;
+}
+
+.nav .nav-buscador img{
+    padding-bottom: 5px;
+    width: 16px;
+}
+
+.nav .nav-login a,
+.nav .nav-login .barrita{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 1em;
+} 
+
+.nav .nav-login .barrita{
+    color: var(--color-vioFF);
+}
+
+.nav .nav-login .iconoLog{
+    width: 30px;  
+    margin-left: 10px;  
+}
+
+.direccion{
+    display: inline-block;
+}

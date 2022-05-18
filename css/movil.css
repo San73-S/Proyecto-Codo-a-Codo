@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-vioCla: #4618ac;
+    --color-vioFuer: #311178;
+    --color-vioFF: #230f52;
+}
+
+/* CONTENEDOR VA EL GRID */
+
+.contenedor{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;    /*TERMINARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR*/
+}
+
+/*-------------------------------------------COMIENZO ESTILOS NAV*/
+
+header{
+    width: 100%;
+}
+/*------------------------------------------------------------NAV*/
+.nav{
+    width: 90%;
+    min-height: 70px;
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.direccion{
+    display: inline-block;
+}
+
+.btn-hamburger{
+    width: 25px;
+}
+
+.nav .btn-lupa{
+    width: 25px;
+}
+
+.titulo{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+/*---------------------------------------------------------FIN NAV*/
+
+/*--------------------------------------------INICIO BARRA LATERAL*/
+
+.barra-lateral .nav-barra{ /*CONTENEDOR DE NOMBRE Y HAMBURGER*/
+    width:100%;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.barra-lateral .nav-barra .titulo{
+    color: white;
+    margin: 0 auto;
+}
+
+.barra-lateral .nav-barra .btn-hamburger{
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color:  var(--color-vioFF);
+}
+
+.fondoBtn {
+    background-color:  var(--color-vioFF);
+    border-width: 0;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+.fondoBtn-nav {
+    background-color: white;
+    border-width: 0;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+ 
+.barra-lateral{                /*CONTENEDOR DE BARRA PRINCIPAl*/
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    background-color: var(--color-vioFF);  
+    left: -90%;
+}
+
+.barra-lateral ul {
+    list-style: none;
+    padding-top: 30px;    
+}
+
+.barra-lateral ul li{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.barra-lateral ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.barra-lateral li{
+    width: 150px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: var(--color-vioCla); 
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*-------------------------------------------------- ANIMACIONES DE DESLIZAR*/
+
+.animacionBarraIz{
+    animation: moverIzquierda 1s ease-in-out normal forwards;
+}
+
+.animacionBarraDr{
+    animation: moverDerecha 1s ease-in-out normal forwards;
+}
+
+@keyframes moverIzquierda{
+    0%{left: 0;}
+    100%{left: -90%;}
+}
+
+@keyframes moverDerecha{
+    0%{left: -90%;}
+    100%{left: 0%;}
+}
+
+/*-------------------------------------------------FIN ESTILOS NAV*/
