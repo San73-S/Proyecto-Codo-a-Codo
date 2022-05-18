@@ -10,12 +10,10 @@
     --color-vioFF: #230f52;
 }
 
-/* CONTENEDOR VA EL GRID */
-
-.contenedor{
+.contenedor{  
     max-width: 1400px;
     margin: 0 auto;
-    display: grid;    /*TERMINARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR*/
+    display: grid;   
     grid-template-rows: repeat(6, max-content) ;
     grid-template-areas: 
     "nav"
@@ -87,3 +85,31 @@ header{
 .direccion{
     display: inline-block;
 }
+
+/*--------------------------------------------------------- FIN NAV*/
+
+/*--------------------------------------------------- INICIO SLIDER*/
+
+main{
+    width: 100%;
+}
+
+
+.slider{
+    grid-area: slider;
+    width: 100vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .slider-img{
+    width: 100vw;
+    min-width: 500px;
+}
+
+.slider .slider-img img{
+    width: 100%;
+} 
