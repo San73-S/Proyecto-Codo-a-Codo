@@ -97,7 +97,7 @@ main{
 
 .slider{
     grid-area: slider;
-    width: 100vw;
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
@@ -105,11 +105,38 @@ main{
     align-items: center;
 }
 
-.slider .slider-img{
-    width: 100vw;
+.slider .slider-contenedor{
+    width: 100%;
     min-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.slider .slider-img img{
+.slider .slider-contenedor ul{
+    padding: 0;
+    display: flex;
+    width: 300%;
+    animation: slider 10s linear infinite alternate;
+}
+
+.slider .slider-contenedor li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider .slider-contenedor img{
     width: 100%;
 } 
+
+@keyframes slider {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    40%{margin-left: -100%;}
+    60%{margin-left: -100%;}
+
+    80%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+
+
+}
