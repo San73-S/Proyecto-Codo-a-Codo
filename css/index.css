@@ -116,7 +116,7 @@ main{
     padding: 0;
     display: flex;
     width: 300%;
-    animation: slider 10s linear infinite alternate;
+    animation: slider 12s linear infinite alternate;
 }
 
 .slider .slider-contenedor li{
@@ -163,7 +163,7 @@ main{
     background-color: white;
 }
 
-.slider-controls div:first-child{
+/* .slider-controls div:first-child{
     animation: select1 4s linear alternate,
                select1 6s linear alternate 18s;
 
@@ -182,7 +182,7 @@ main{
 @keyframes select1 {
     0%{background-color: var(--color-vioCla);}
     100%{background-color: var(--color-vioCla);}
-}
+} */
 
 /*------------------------------------------------------- FIN SLIDER*/
 
