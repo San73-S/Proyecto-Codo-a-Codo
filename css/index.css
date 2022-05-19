@@ -6,6 +6,7 @@
 
 :root{
     --color-vioCla: #4618ac;
+    --Color-VioCC: #5825cc;
     --color-vioFuer: #311178;
     --color-vioFF: #230f52;
 }
@@ -13,7 +14,8 @@
 .contenedor{  
     max-width: 1400px;
     margin: 0 auto;
-    display: grid;   
+    display: grid; 
+    height: 100vh;
     grid-template-rows: repeat(6, max-content) ;
     grid-template-areas: 
     "nav"
@@ -24,11 +26,13 @@
     "footer";
 }
 
-header{
+header{    
     width: 100%;
 }
 /*------------------------------------------------------------NAV*/
+
 .nav{
+    grid-area: nav;
     width: 90%;
     min-height: 70px;
     max-width: 1200px;
@@ -36,7 +40,7 @@ header{
     margin: 0 auto;
     justify-content: space-around;
     align-items: center;
-    grid-area: nav;
+    
 }
 
 .nav .nav-titulo{
@@ -90,15 +94,10 @@ header{
 
 /*--------------------------------------------------- INICIO SLIDER*/
 
-main{
-    width: 100%;
-}
-
-
 .slider{
     grid-area: slider;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1400px;    
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -108,6 +107,7 @@ main{
 .slider .slider-contenedor{
     width: 100%;
     min-width: 500px;
+    min-height: 83.365%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -147,9 +147,13 @@ main{
 
 /*CONTROLES DEL SLIDER*/
 
- .slider-controls{   
-     position: absolute;
+ .slider-controls{    
     grid-area: slider; 
+    position: absolute;   
+     position: absolute;
+    position: absolute;   
+     position: absolute;
+    position: absolute;   
     z-index: 10;
     width: 80px;
     height: 50px;
@@ -212,7 +216,7 @@ main{
 
 .btn .btn-contenedor button{
     width: 13%;
-    padding: .7% 0;
+    padding: .5% 0;
     border-radius: 10px;
     cursor: pointer;
     border: 2px solid var(--color-vioFuer);
@@ -225,3 +229,43 @@ main{
     box-shadow: 4px 6px 6px -2px rgba(0, 0, 0, 0.5);
 }
 
+/*--------------------------------------------------- FIN BOTONES*/
+
+
+/*--------------------------------------------------- INICIO CARROUSE DE JUEGO*/
+
+.juegos{
+    grid-area: juegos;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 510px;
+    background-color: var(--Color-VioCC) ;
+    border-top: 3px solid var(--color-vioFuer) ;
+    border-bottom: 3px solid var(--color-vioFuer);
+}
+
+/*--------------------------------------------------- FIN CARROUSE DE JUEGO*/
+
+/*--------------------------------------------------------- INICIO CONTACTO*/
+
+.contacto{
+    grid-area: contacto;
+    width: 100%;
+    max-width: 1400%;
+    min-height: 270px;
+}
+
+/*------------------------------------------------------------ FIN CONTACTO*/
+
+/*----------------------------------------------------------- INICIO FOOTER*/
+
+.footer{
+    grid-area: footer;
+    width: 100%;
+    max-width: 1400%;
+    min-height: 150px;
+    background-color: var(--color-vioFuer);
+   border-top: 3px solid var(--color-vioFF);
+}
+
+/*----------------------------------------------------------- FIN FOOTER*/

@@ -51,7 +51,9 @@ let s3 = document.getElementById("s3");
 
     /*Al no hacer el slider con js tuve que crear la animacion de los tres puntos con js
     Ya que esta tiende a retroceder en sus pasos al terminar y a su vez modifica su tiempo.
-    el slider tiene un patron de animacion que es (Secuencia de fotos: 1 - 2 - 3 - |2| - 1 - 2 - 3 - |2|...)
+    el slider tiene un patron de animacion que es:
+    (Secuencia de fotos: 1 - 2 - 3 - |2| - 1 - 2 - 3 - |2|...)
+    (Secuencia de segundos: 4s, 4s, 6s, 4s, 6s, 4s, 6s....)
     el slider esta creado para durar 10 seg, pero al volver en sus pasos la ultima foto en vez
     de durar 4 seg dura 6, lo mismo le pasa a la primer foto en su regreso.*/
     
@@ -79,8 +81,6 @@ let s3 = document.getElementById("s3");
     contador++
 
     let timerId = setTimeout(function pintar() {
-        
-        console.log(delay)
 
         if (flag == true && delay == 4000) {
             contador -= 2;
