@@ -116,7 +116,7 @@ main{
     padding: 0;
     display: flex;
     width: 300%;
-    animation: slider 12s linear infinite alternate;
+    animation: slider 10s linear infinite alternate;
 }
 
 .slider .slider-contenedor li{
@@ -138,6 +138,11 @@ main{
 
     80%{margin-left: -200%;}
     100%{margin-left: -200%;}
+}
+
+@keyframes auxSlider {
+    0%{margin-left: 0;}
+    100%{margin-left: 0;}
 }
 
 /*CONTROLES DEL SLIDER*/
