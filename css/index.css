@@ -67,8 +67,23 @@ header{
     color: #707070;
 }
 
+.nav .nav-buscador input{
+    width:100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.nav .nav-buscador button{
+    border-width: 0;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    border-bottom: 2px solid var(--color-vioCla);
+}
+
 .nav .nav-buscador img{
-    padding-bottom: 5px;
+    padding-bottom: 1px;
     width: 16px;
 }
 
@@ -232,6 +247,10 @@ header{
     color: white;
     box-shadow: 4px 6px 6px -2px rgba(0, 0, 0, 0.5);
 }
+.btn .btn-contenedor button:hover{
+    background-color: var(--Color-VioCC);
+}
+
 
 /*--------------------------------------------------- FIN BOTONES*/
 
@@ -375,6 +394,10 @@ a{
     box-shadow: 4px 6px 6px -2px rgba(0, 0, 0, 0.5);
 }
 
+.contacto .contacto-btn button:hover{
+    background-color: var(--Color-VioCC);
+}
+
 /*------------------------------------------------------------ FIN CONTACTO*/
 
 /*----------------------------------------------------------- INICIO FOOTER*/
@@ -421,5 +444,10 @@ a{
 
 .footer .footer-contenedor img{
     width: 40px;
+    cursor: pointer;    
+}
+
+.footer .footer-contenedor img:hover{
+transform: scale(1.1,1.1);
 }
 /*----------------------------------------------------------- FIN FOOTER*/
