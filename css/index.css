@@ -280,7 +280,7 @@ a{
     display: flex;
     align-items: center;
     width: fit-content;
-    height: 304px;
+    height: 340px;
     padding: 10px 0px;
     margin: 0px auto;
     max-width: 90vw;
@@ -313,7 +313,8 @@ a{
     transition: .3s ease-in-out;
 }
 .juegos-img .img a img:hover{
-    opacity: .85;
+    opacity: .90;
+    transform: scale(1.1,1.1);
 }
 
 .flecha{
@@ -448,6 +449,6 @@ a{
 }
 
 .footer .footer-contenedor img:hover{
-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
 }
 /*----------------------------------------------------------- FIN FOOTER*/
