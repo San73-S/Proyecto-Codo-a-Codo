@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 110%);
+}
+
 :root{
     --color-vioCla: #4618ac;
     --Color-VioCC: #5825cc;
@@ -234,14 +238,90 @@ header{
 
 /*--------------------------------------------------- INICIO CARROUSE DE JUEGO*/
 
+a{
+    text-decoration: none;
+}
+
 .juegos{
     grid-area: juegos;
     width: 100%;
+    margin: 0px auto; 
     max-width: 1400px;
-    min-height: 510px;
+    min-height: 450px;
     background-color: var(--Color-VioCC) ;
     border-top: 3px solid var(--color-vioFuer) ;
     border-bottom: 3px solid var(--color-vioFuer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.juegos-contenedor{        
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.juegos-img{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.juegos-img .img{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.juegos-img .img a img{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;    
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+    transition: .3s ease-in-out;
+}
+.juegos-img .img a img:hover{
+    opacity: .85;
+}
+
+.flecha{
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+}
+.flecha:focus{
+    outline: 0;
+}
+.flecha svg{
+    width: 12px;
+    height: 100%;
+    color: rgba(0,0,0,.7);
+}
+.iz{
+    left: 0px;
+}
+.dr{
+    right: 0px;
 }
 
 /*--------------------------------------------------- FIN CARROUSE DE JUEGO*/
