@@ -185,7 +185,7 @@ header{
 .slider .slider-contenedor ul{
     position: relative;
     padding: 0;
-    width: 300%;
+    width: 500%;
     display: flex;
     flex-shrink: 0;   
     flex-grow: 0;
@@ -222,7 +222,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30px;
+    width: 40px;
     height: 30px;
     overflow: hidden;
     cursor: pointer;
@@ -266,6 +266,22 @@ input[id="3"]:checked ~ .slider-contenedor{
 }
 
 input[id="3"]:checked ~ .slider-controls .slider-item[for="3"]{ 
+    border: 1px solid var(--color-vioFF);
+}
+
+input[id="4"]:checked ~ .slider-contenedor{
+    transform: translate3d(calc(-100% *3),0,0);
+}
+
+input[id="4"]:checked ~ .slider-controls .slider-item[for="4"]{ 
+    border: 1px solid var(--color-vioFF);
+}
+
+input[id="5"]:checked ~ .slider-contenedor{
+    transform: translate3d(calc(-100% *4),0,0);
+}
+
+input[id="5"]:checked ~ .slider-controls .slider-item[for="5"]{ 
     border: 1px solid var(--color-vioFF);
 }
 
