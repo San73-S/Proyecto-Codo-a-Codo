@@ -1,0 +1,375 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 110%);
+}
+
+:root{
+    --color-vioCla: #4618ac;
+    --Color-VioCC: #5825cc;
+    --color-vioFuer: #311178;
+    --color-vioFF: #230f52;
+    --color-vioBorde: #441aa1;
+   --color-fondoJuegos: rgba(71,24,172, .68);
+}
+
+.contenedor{  
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid; 
+    height: 100vh;
+    grid-template-rows: repeat(6, max-content);
+    grid-template-areas: 
+    "nav"
+    "ruta"
+    "videojuegoSlider"
+    "videojuego"
+    "informacion"
+    "contacto"
+    "footer";
+}
+
+header{    
+    width: 100%;
+}
+/*------------------------------------------------------------NAV*/
+
+.nav{
+    grid-area: nav;
+    width: 90%;
+    min-height: 70px;
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.nav .nav-titulo{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+.nav .nav-buscador{
+    width: 30%;
+    height: 20px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-vioCla);
+}
+
+.nav .nav-buscador p{
+    color: #707070;
+}
+
+.nav .nav-buscador input{
+    width:100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.nav .nav-buscador button{
+    border-width: 0;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    border-bottom: 2px solid var(--color-vioCla);
+}
+
+.nav .nav-buscador img{
+    padding-bottom: 1px;
+    width: 16px;
+}
+
+.nav .nav-login a,
+.nav .nav-login .barrita{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 1em;
+} 
+
+.nav .nav-login .barrita{
+    color: var(--color-vioFF);
+}
+
+.nav .nav-login .iconoLog{
+    width: 30px;  
+    margin-left: 10px;  
+}
+
+.direccion{
+    display: inline-block;
+}
+
+/*--------------------------------------------------------- FIN NAV*/
+
+/*--------------------------------------------------------- INICIO RUTAS*/
+.rutas{
+    grid-area: ruta;
+    width: 100%;
+    height: 50px;    
+    background-color: var(--Color-VioCC);
+    border-top: 3px solid var(--color-vioBorde);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rutas .rutas-contenedor{
+    width: 80.528%;    
+}
+
+.rutas .rutas-contenedor p, a{
+    font-family: 'Roboto Slab', serif; 
+    font-weight: 400;
+    color: #858585; 
+    text-decoration: none;  
+}
+
+
+.rutas .rutas-contenedor a:hover{
+    color: var(--color-vioFF);
+}
+
+/*--------------------------------------------------------- FIN RUTAS*/
+
+/*--------------------------------------------------------- INICIO JUEGOS*/
+.juegos-slider{
+    grid-area: videojuegoSlider;
+    width: 100%;
+    min-height: 450px;
+    background-color: var(--Color-VioCC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.juegos-slider .juegos-contenedor{
+    width: 80.528%;
+    height: 100%;
+    background-color: var(--color-fondoJuegos);  
+    display: grid;
+    grid-template-columns: repeat(3, 33.33% ); 
+    grid-template-rows: 50px 350px 50px;
+}
+
+.slider{ 
+    grid-column: 1 / 3;
+    grid-row: 2;
+    width: 650px;
+    max-width: 1000px;  
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slider .slider-contenedor{
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.slider .slider-contenedor ul{
+    position: relative;
+    padding: 0;
+    width: 300%;
+    display: flex;
+    flex-shrink: 0;   
+    flex-grow: 0;
+    transform: translate3d(0,0,0);
+    transition: all 600ms;
+}
+
+.slider .slider-contenedor li{
+    width: 100%;
+    height: 350px ;
+    list-style: none;
+}
+
+.slider .slider-contenedor img{
+    width: 100%;
+    height: 350px;
+    border: 2px solid var(--color-vioFF);
+} 
+
+.slider-controls{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-controls .slider-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 300ms;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.slider-controls .slider-item:hover{
+    transform: scale(1.5,1.5);
+}
+
+.slider-controls .slider-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+}
+
+input[id="1"]:checked ~ .slider-contenedor{
+    transform: translate3d(0,0,0);
+}
+
+input[id="1"]:checked ~ .slider-controls .slider-item[for="1"]{
+    background-color: white;
+}
+
+input[id="2"]:checked ~ .slider-contenedor{
+    transform: translate3d(calc(-100% *1),0,0);
+}
+
+input[id="2"]:checked ~ .slider-controls .slider-item[for="2"]{
+    background-color: white;
+}
+
+input[id="3"]:checked ~ .slider-contenedor{
+    transform: translate3d(calc(-100% *2),0,0);
+}
+
+input[id="3"]:checked ~ .slider-controls .slider-item[for="3"]{ 
+    border: 1px solid var(--color-vioFF);
+}
+
+
+.juego-info{
+    grid-column: span 3;
+    grid-row: 2;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.juego-info p{
+    font-family: 'Roboto Slab', serif; 
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.juego-info img{
+    padding: 10px 0;
+    display: block;
+    width: 140px;
+    color: #ffb300;
+}
+
+
+.juegos-compra{
+    grid-area: videojuego;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    background-color: var(--Color-VioCC);
+}
+/*--------------------------------------------------------- FIN JUEGOS*/
+
+
+/*--------------------------------------------------------- INICIO INFORMACION*/
+.informacion{
+    grid-area: informacion;
+    width: 100%;
+    height: 200px;
+    background-color: #707070;
+    margin: 0 auto;
+    background-color: var(--Color-VioCC);
+}
+/*--------------------------------------------------------- FIN INFORMACION*/
+
+
+
+
+
+/*----------------------------------------------------------- INICIO FOOTER*/
+
+.footer{
+    grid-area: footer;
+    width: 100%;
+    max-width: 1400%;
+    min-height: 100px;
+    background-color: var(--color-vioFuer);
+   border-top: 3px solid var(--color-vioFF);   
+}
+
+.footer .footer-contenedor{
+    width: 100%;
+    height: 100%;
+    display: grid;
+   grid-template-columns: 70px 1fr;
+   grid-template-rows: repeat(2, 1fr); 
+}
+
+.footer .footer-contenedor p{
+    grid-column: span 2;
+    grid-row: 1/span 2;
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+}
+
+.footer .footer-contenedor img:first-child{
+    grid-column: 1;
+    grid-row: 1; 
+    margin: auto;   
+}
+
+.footer .footer-contenedor img:nth-child(2){
+    grid-column: 1;
+    grid-row: span 2;
+    margin: auto;
+}
+
+.footer .footer-contenedor img{
+    width: 40px;
+    cursor: pointer;    
+}
+
+.footer .footer-contenedor img:hover{
+    transform: scale(1.1,1.1);
+}
+/*----------------------------------------------------------- FIN FOOTER*/
