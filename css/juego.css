@@ -148,7 +148,7 @@ header{
 .juegos-slider{
     grid-area: videojuegoSlider;
     width: 100%;
-    min-height: 450px;
+    min-height: 424px;
     background-color: var(--Color-VioCC);
     display: flex;
     justify-content: center;
@@ -161,7 +161,7 @@ header{
     background-color: var(--color-fondoJuegos);  
     display: grid;
     grid-template-columns: repeat(3, 33.33% ); 
-    grid-template-rows: 50px 350px 50px;
+    grid-template-rows: 37px 350px 37px;
 }
 
 .slider{ 
@@ -179,8 +179,7 @@ header{
 
 .slider .slider-contenedor{
     width: 100%;
-    margin: 0 auto;
-    
+    margin: 0 auto    
 }
 
 .slider .slider-contenedor ul{
@@ -292,9 +291,76 @@ input[id="3"]:checked ~ .slider-controls .slider-item[for="3"]{
 .juego-info img{
     padding: 10px 0;
     display: block;
-    width: 140px;
+    width: 140px; 
     color: #ffb300;
 }
+
+.juego-info .barra{
+    width: 75%;
+    height: 4px;
+    background-color: var(--Color-VioCC);
+    margin-top: 5px;
+    padding-top: 4px;
+    margin-bottom: 20px;
+}
+
+.juego-info article{
+    font-family: 'Roboto Slab', serif; 
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.juego-info .contenedor-precio{
+    width: 43%;
+    height: 26px;
+    border-radius: 10px;
+    margin-top: 35px;
+    background-color: var(--Color-VioCC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.juego-info .contenedor-precio p{
+    font-family: 'Roboto Slab', serif; 
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.juego-info .contenedor-botones{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8%;
+}
+
+.juego-info .contenedor-botones button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--color-vioCla);
+    border: 2px solid var(--color-vioFuer);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px;
+    font-weight: 600; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);  
+    cursor: pointer;
+}
+
+.juego-info .contenedor-botones button:hover{
+    transform: scale(1.05,1.05);
+    background-color: var(--Color-VioCC);
+}
+
+
+
+
 
 
 .juegos-compra{
