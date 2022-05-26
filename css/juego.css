@@ -28,7 +28,7 @@ body {
         "ruta"
         "videojuegoSlider"
         "informacion"
-        "contacto"
+        "similares"
         "footer";
 }
 
@@ -110,6 +110,10 @@ header {
 
 .direccion {
     display: inline-block;
+}
+
+.iconoCarro{
+    width: 30px;
 }
 
 /*--------------------------------------------------------- FIN NAV*/
@@ -251,7 +255,7 @@ input[id="1"]:checked~.slider-contenedor {
 }
 
 input[id="1"]:checked~.slider-controls .slider-item[for="1"] {
-    background-color: white;
+    transform: scale(1.3, 1.3);
 }
 
 input[id="2"]:checked~.slider-contenedor {
@@ -259,7 +263,7 @@ input[id="2"]:checked~.slider-contenedor {
 }
 
 input[id="2"]:checked~.slider-controls .slider-item[for="2"] {
-    background-color: white;
+    transform: scale(1.3, 1.3);
 }
 
 input[id="3"]:checked~.slider-contenedor {
@@ -267,7 +271,7 @@ input[id="3"]:checked~.slider-contenedor {
 }
 
 input[id="3"]:checked~.slider-controls .slider-item[for="3"] {
-    border: 1px solid var(--color-vioFF);
+    transform: scale(1.3, 1.3);
 }
 
 input[id="4"]:checked~.slider-contenedor {
@@ -275,15 +279,15 @@ input[id="4"]:checked~.slider-contenedor {
 }
 
 input[id="4"]:checked~.slider-controls .slider-item[for="4"] {
-    border: 1px solid var(--color-vioFF);
+    transform: scale(1.3, 1.3);
 }
 
 input[id="5"]:checked~.slider-contenedor {
     transform: translate3d(calc(-100% *4), 0, 0);
 }
 
-input[id="5"]:checked~.slider-controls .slider-item[for="5"] {
-    border: 1px solid var(--color-vioFF);
+input[id="5"]:checked~.slider-controls .slider-item[for="5"] {      
+    transform: scale(1.3, 1.3);
 }
 
 
@@ -433,15 +437,77 @@ input[id="5"]:checked~.slider-controls .slider-item[for="5"] {
 .informacion .informacion-contenedor span{
     color: #707070;
 }
-
-
-
-
-
-
-
 /*--------------------------------------------------------- FIN INFORMACION*/
 
+/*----------------------------------------------------------- INICIO JUEGOS SIMILARES*/
+
+.similares{
+    grid-area: similares;
+    width: 100%;
+    height: 280px;
+    margin: 0 auto;
+    background-color: var(--Color-VioCC);
+    display: flex;
+    justify-content: center;
+}
+
+.similares .similares-contenedor h3{
+    width: 100%;
+    height: 50px;
+    font-family: 'Roboto Slab', serif;   
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: white;
+    display: flex;
+    justify-content: left;        
+    align-items: center;
+}
+
+.similares .similares-contenedor{
+    width: 82.528%;
+    height: 250px;
+}
+
+.similares .similares-contenedor .similares-juego{
+    width: 275px;
+    height: 180px;
+    background-color: var(--color-vioCla);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.similares .similares-contenedor .similares-juego img{
+    width: 255px;
+    height: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.similares-info{
+    width: 255px;
+    height: 100%;  
+}
+
+.similares-info h4{
+    color: white;
+    margin-top: 10px;
+    font-family: 'Roboto Slab', serif;   
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.similares-info p{
+    color: white;
+    font-family: 'Roboto Slab', serif;  
+    text-align: right;
+    margin-top: 10px;       
+    font-weight: 400;
+    font-size: 14px;    
+    letter-spacing: 1px;
+}
 
 
 
@@ -450,12 +516,7 @@ input[id="5"]:checked~.slider-controls .slider-item[for="5"] {
 
 
 
-
-
-
-
-
-
+/*--------------------------------------------------------- FIN JUEGOS SIMILARES*/
 
 /*----------------------------------------------------------- INICIO FOOTER*/
 
