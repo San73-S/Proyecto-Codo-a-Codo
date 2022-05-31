@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 110%);
+}
+
+:root{
+    --color-vioCla: #4618ac;
+    --Color-VioCC: #5825cc;
+    --color-vioFuer: #311178;
+    --color-vioFF: #230f52;
+}
+
+.contenedor{  
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid; 
+    height: 100vh;
+    grid-template-rows: repeat(6, max-content) ;
+    grid-template-areas: 
+    "nav"
+    "slider"
+    "botones"
+    "juegos"
+    "contacto"
+    "footer";
+}
+
+header{    
+    width: 100%;
+}
+/*------------------------------------------------------------NAV*/
+
+.nav{
+    grid-area: nav;
+    width: 90%;
+    min-height: 70px;
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.nav .nav-titulo{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+.nav .nav-buscador{
+    width: 30%;
+    height: 20px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-vioCla);
+}
+
+.nav .nav-buscador p{
+    color: #707070;
+}
+
+.nav .nav-buscador input{
+    width:100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.nav .nav-buscador button{
+    border-width: 0;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    border-bottom: 2px solid var(--color-vioCla);
+}
+
+.nav .nav-buscador img{
+    padding-bottom: 1px;
+    width: 16px;
+}
+
+.nav .nav-login a,
+.nav .nav-login .barrita{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 1em;
+} 
+
+.nav .nav-login .barrita{
+    color: var(--color-vioFF);
+}
+
+.nav .nav-login .iconoLog{
+    width: 30px;  
+    margin-left: 10px;  
+}
+
+.direccion{
+    display: inline-block;
+}
+
+/*--------------------------------------------------------- FIN NAV*/
+
+
+
+
+/*----------------------------------------------------------- INICIO FOOTER*/
+
+.footer{
+    grid-area: footer;
+    width: 100%;
+    max-width: 1400%;
+    min-height: 100px;
+    background-color: var(--color-vioFuer);
+   border-top: 3px solid var(--color-vioFF);   
+}
+
+.footer .footer-contenedor{
+    width: 100%;
+    height: 100%;
+    display: grid;
+   grid-template-columns: 70px 1fr;
+   grid-template-rows: repeat(2, 1fr); 
+}
+
+.footer .footer-contenedor p{
+    grid-column: span 2;
+    grid-row: 1/span 2;
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+}
+
+.footer .footer-contenedor img:first-child{
+    grid-column: 1;
+    grid-row: 1; 
+    margin: auto;   
+}
+
+.footer .footer-contenedor img:nth-child(2){
+    grid-column: 1;
+    grid-row: span 2;
+    margin: auto;
+}
+
+.footer .footer-contenedor img{
+    width: 40px;
+    cursor: pointer;    
+}
+
+.footer .footer-contenedor img:hover{
+    transform: scale(1.1,1.1);
+}
+/*----------------------------------------------------------- FIN FOOTER*/
+
