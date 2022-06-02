@@ -1,41 +1,40 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 110%);
+body {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(226, 226, 226, 1) 110%);
 }
 
-:root{
+:root {
     --color-vioCla: #4618ac;
     --Color-VioCC: #5825cc;
     --color-vioFuer: #311178;
     --color-vioFF: #230f52;
 }
 
-.contenedor{  
+.contenedor {
     max-width: 1400px;
     margin: 0 auto;
-    display: grid; 
+    display: grid;
     height: 100vh;
-    grid-template-rows: repeat(6, max-content) ;
-    grid-template-areas: 
-    "nav"
-    "slider"
-    "botones"
-    "juegos"
-    "contacto"
-    "footer";
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+        "nav"
+        "formulario"
+        "footer";
 }
 
-header{    
+header {
     width: 100%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.486);
 }
+
 /*------------------------------------------------------------NAV*/
 
-.nav{
+.nav {
     grid-area: nav;
     width: 90%;
     min-height: 70px;
@@ -44,16 +43,23 @@ header{
     margin: 0 auto;
     justify-content: space-around;
     align-items: center;
-    
 }
 
-.nav .nav-titulo{
+.nav a{
+    color: black;
+}
+
+.nav a:hover{
+    color: var(--Color-VioCC);
+}
+
+.nav .nav-titulo {
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
     font-size: 35px;
 }
 
-.nav .nav-buscador{
+.nav .nav-buscador {
     width: 30%;
     height: 20px;
     max-width: 500px;
@@ -63,18 +69,18 @@ header{
     border-bottom: 2px solid var(--color-vioCla);
 }
 
-.nav .nav-buscador p{
+.nav .nav-buscador p {
     color: #707070;
 }
 
-.nav .nav-buscador input{
-    width:100%;
+.nav .nav-buscador input {
+    width: 100%;
     background-color: transparent;
     border: none;
     outline: none;
 }
 
-.nav .nav-buscador button{
+.nav .nav-buscador button {
     border-width: 0;
     border-style: outset;
     border-color: buttonborder;
@@ -82,58 +88,169 @@ header{
     border-bottom: 2px solid var(--color-vioCla);
 }
 
-.nav .nav-buscador img{
+.nav .nav-buscador img {
     padding-bottom: 1px;
     width: 16px;
 }
 
 .nav .nav-login a,
-.nav .nav-login .barrita{
+.nav .nav-login .barrita {
     text-decoration: none;
     color: black;
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
     font-size: 1em;
-} 
+}
 
-.nav .nav-login .barrita{
+.nav .nav-login .barrita {
     color: var(--color-vioFF);
 }
 
-.nav .nav-login .iconoLog{
-    width: 30px;  
-    margin-left: 10px;  
+.nav .nav-login .iconoLog {
+    width: 30px;
+    margin-left: 10px;
 }
 
-.direccion{
+.direccion {
     display: inline-block;
 }
 
 /*--------------------------------------------------------- FIN NAV*/
 
+/*--------------------------------------------------------- FIN FORMULARIO*/
 
+.formulario {
+    grid-area: formulario;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.formulario .formulario-contenedor {
+    width: 950px;
+    height: 500px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 550px 400px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+
+/*INICIA ESTILOS DEL FORMULARIO*/
+
+.formulario .formulario-contenedor .formulario-form {
+    grid-column: 1;
+    background-color: white;
+    border-radius: 30px 0 0 30px;
+}
+
+/*INICIA ESTILOS DEL FORMULARIO DE CONTACTO*/
+
+.formulario .formulario-contenedor .formulario-contactos {
+    grid-column: 2;
+    background-color: var(--color-vioCla);
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.formulario .formulario-contenedor .formulario-contactos h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 35px;
+    padding-top: 30px;
+    color: white;
+}
+
+.formulario .formulario-contenedor .formulario-contactos .barrita{
+    width: 250px;
+    height: 4px;
+    background-color: var(--Color-VioCC) ;
+    margin-top: 10px;
+}
+
+.formulario .formulario-contenedor .formulario-contactos p{
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    width: 320px;
+    margin-top: 20px;  
+    text-align: center; 
+}
+
+.formulario .formulario-contenedor .formulario-contactos .infoContacto{    
+    width: 320px;
+    height: 35px;
+    background-color: var(--Color-VioCC);
+    border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario .formulario-contenedor .formulario-contactos .infoContacto img{
+    width: 35px;
+    border-radius: 10px;
+    position: relative;
+    left: -42px;
+}
+
+.formulario .formulario-contenedor .formulario-contactos .infoContacto p{
+    font-size: 14px;
+    width: 200px;
+    margin-top: 0;
+    display: inline-block;
+}
+
+.formulario-contactos .redes{
+    margin-top: 30px !important;  
+}
+
+.formulario .formulario-contenedor .formulario-contactos .ico-redes{
+    width: 120px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.formulario .formulario-contenedor .formulario-contactos .ico-redes img{
+    width: 35px;
+    border-radius: 10px;
+}
+
+.formulario .formulario-contenedor .formulario-contactos .ico-redes img:hover{
+    transform: scale(1.1, 1.1);
+}
+
+/*----------------------------------------------------------- INICIO FORMULARIO*/
 
 /*----------------------------------------------------------- INICIO FOOTER*/
 
-.footer{
+.footer {
     grid-area: footer;
     width: 100%;
     max-width: 1400%;
     min-height: 100px;
     background-color: var(--color-vioFuer);
-   border-top: 3px solid var(--color-vioFF);   
+    border-top: 3px solid var(--color-vioFF);
 }
 
-.footer .footer-contenedor{
+.footer .footer-contenedor {
     width: 100%;
     height: 100%;
     display: grid;
-   grid-template-columns: 70px 1fr;
-   grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: repeat(2, 1fr);
 }
 
-.footer .footer-contenedor p{
+.footer .footer-contenedor p {
     grid-column: span 2;
     grid-row: 1/span 2;
     color: white;
@@ -144,25 +261,25 @@ header{
     font-weight: bold;
 }
 
-.footer .footer-contenedor img:first-child{
+.footer .footer-contenedor img:first-child {
     grid-column: 1;
-    grid-row: 1; 
-    margin: auto;   
+    grid-row: 1;
+    margin: auto;
 }
 
-.footer .footer-contenedor img:nth-child(2){
+.footer .footer-contenedor img:nth-child(2) {
     grid-column: 1;
     grid-row: span 2;
     margin: auto;
 }
 
-.footer .footer-contenedor img{
+.footer .footer-contenedor img {
     width: 40px;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
-.footer .footer-contenedor img:hover{
-    transform: scale(1.1,1.1);
+.footer .footer-contenedor img:hover {
+    transform: scale(1.1, 1.1);
 }
+
 /*----------------------------------------------------------- FIN FOOTER*/
-
