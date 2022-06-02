@@ -45,11 +45,11 @@ header {
     align-items: center;
 }
 
-.nav a{
+.nav a {
     color: black;
 }
 
-.nav a:hover{
+.nav a:hover {
     color: var(--Color-VioCC);
 }
 
@@ -143,7 +143,87 @@ header {
     grid-column: 1;
     background-color: white;
     border-radius: 30px 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+.formulario .formulario-contenedor .formulario-form h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 30px;
+    color: var(--color-vioCla);
+}
+
+.formulario .formulario-contenedor .formulario-form p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--Color-VioCC);
+    width: 400px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.formulario .formulario-contenedor .formulario-form form{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario .formulario-contenedor .formulario-form form div{
+    width: 350px;
+    height: 30px;
+    border-radius: 50px;
+    border: 2px solid var(--color-vioCla);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario .formulario-contenedor .formulario-form form input{
+    outline: none;
+    border: none;
+    width: 90%;    
+}
+
+.formulario .formulario-contenedor .formulario-form form .area{
+    width: 350px;
+    height: 90px !important;
+    border-radius: 20px !important;
+    border: 2px solid var(--color-vioCla);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario .formulario-contenedor .formulario-form form .area textarea{
+    width: 90%;
+    height: 95%;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.formulario .formulario-contenedor .formulario-form form input[type="button"]{
+    width: 200px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: var(--Color-VioCC);
+    color: white;
+    cursor: pointer;
+}
+
+.formulario .formulario-contenedor .formulario-form form input[type="button"]:hover{
+    background-color: var(--color-vioCla);
+}
+
+
 
 /*INICIA ESTILOS DEL FORMULARIO DE CONTACTO*/
 
@@ -165,24 +245,24 @@ header {
     color: white;
 }
 
-.formulario .formulario-contenedor .formulario-contactos .barrita{
+.formulario .formulario-contenedor .formulario-contactos .barrita {
     width: 250px;
     height: 4px;
-    background-color: var(--Color-VioCC) ;
+    background-color: var(--Color-VioCC);
     margin-top: 10px;
 }
 
-.formulario .formulario-contenedor .formulario-contactos p{
+.formulario .formulario-contenedor .formulario-contactos p {
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
     font-size: 15px;
     color: white;
     width: 320px;
-    margin-top: 20px;  
-    text-align: center; 
+    margin-top: 20px;
+    text-align: center;
 }
 
-.formulario .formulario-contenedor .formulario-contactos .infoContacto{    
+.formulario .formulario-contenedor .formulario-contactos .infoContacto {
     width: 320px;
     height: 35px;
     background-color: var(--Color-VioCC);
@@ -193,25 +273,25 @@ header {
     justify-content: center;
 }
 
-.formulario .formulario-contenedor .formulario-contactos .infoContacto img{
+.formulario .formulario-contenedor .formulario-contactos .infoContacto img {
     width: 35px;
     border-radius: 10px;
     position: relative;
     left: -42px;
 }
 
-.formulario .formulario-contenedor .formulario-contactos .infoContacto p{
+.formulario .formulario-contenedor .formulario-contactos .infoContacto p {
     font-size: 14px;
     width: 200px;
     margin-top: 0;
     display: inline-block;
 }
 
-.formulario-contactos .redes{
-    margin-top: 30px !important;  
+.formulario-contactos .redes {
+    margin-top: 30px !important;
 }
 
-.formulario .formulario-contenedor .formulario-contactos .ico-redes{
+.formulario .formulario-contenedor .formulario-contactos .ico-redes {
     width: 120px;
     height: 35px;
     display: flex;
@@ -220,12 +300,12 @@ header {
     margin-top: 10px;
 }
 
-.formulario .formulario-contenedor .formulario-contactos .ico-redes img{
+.formulario .formulario-contenedor .formulario-contactos .ico-redes img {
     width: 35px;
     border-radius: 10px;
 }
 
-.formulario .formulario-contenedor .formulario-contactos .ico-redes img:hover{
+.formulario .formulario-contenedor .formulario-contactos .ico-redes img:hover {
     transform: scale(1.1, 1.1);
 }
 

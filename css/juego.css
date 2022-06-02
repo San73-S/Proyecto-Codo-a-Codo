@@ -47,7 +47,14 @@ header {
     margin: 0 auto;
     justify-content: space-around;
     align-items: center;
+}
 
+.nav a {
+    color: black;
+}
+
+.nav a:hover {
+    color: var(--Color-VioCC);
 }
 
 .nav .nav-titulo {
