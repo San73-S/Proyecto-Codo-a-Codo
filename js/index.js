@@ -161,3 +161,11 @@ let nextAction = (leftPosition,trackWidth,listWidth,slickWidth,track) => {
         track.style.left = `${-1 * (leftPosition + slickWidth)}px`;
     }
 }
+
+function deslizarDr(){
+    document.getElementById("barra-lat").classList='barra-lateral animacionBarraDr';
+}
+
+function deslizarIz(){
+    document.getElementById("barra-lat").classList='barra-lateral animacionBarraIz';
+}

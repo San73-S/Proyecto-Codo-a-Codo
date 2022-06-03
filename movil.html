@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/movil.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;900&display=swap" rel="stylesheet">
     <title>WestPlay</title>
 </head>
 
@@ -17,9 +17,9 @@
 
         <header>
             
-            <nav class="barra-lateral " id="barra-lat">
+            <nav class="barra-lateral naveg" id="barra-lat">
 
-                <div class="nav-barra ">
+                <div class="nav-barra">
                     <p class="direccion titulo">WestPlay</p>
                     <button type="button" id="btn-barra" class="fondoBtn" onclick="deslizarIz()">
                         <img src="media/hamburger.png" alt="Icono hamburger" class="btn-hamburger"></button>
@@ -30,13 +30,30 @@
                     <li><a href="#">Registrarse</a></li>
                     <li><a href="#">Categorias</a></li>
                 </ul>
+
+
+
+                <p class="nav-titulo direccion">WestPlay</p>
+
+                <div class="nav-buscador direccion">
+                    <input type="text" placeholder="Buscar">
+                    <!--<p class="direccion">Buscar</p> tiene que SER UN IMPUT-->
+                    <button type="button"><img src="media/lupaa.png" alt="icono de lupa"></button>                    
+                </div>
+
+                <p class="nav-login direccion"><a href="#">Iniciar Sesión</a> <span class="barrita">|</span>
+                    <a href="#">Registrarse</a> <img class="iconoLog" src="media/usuario.png" alt="icono usuario">
+                </p>
+
+
+
             </nav>
 
             <div class="nav">
                 <button type="button" class="direccion fondoBtn-nav" id="btn-nav" onclick="deslizarDr()">
                     <img src="media/hamburger.png" alt="Icono hamburger" class="btn-hamburger"></button>
                 <p class="direccion titulo">WestPlay</p>
-                <a href="#"><img src="media/lupa.png" alt="Icono lupa" class="btn-lupa"></a>
+                <a href="#"><img src="media/lupaa.png" alt="Icono lupa" class="btn-lupa"></a>
             </div>
         </header>
 

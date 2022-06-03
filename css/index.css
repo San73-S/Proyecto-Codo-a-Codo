@@ -35,7 +35,7 @@ header{
 }
 /*------------------------------------------------------------NAV*/
 
-.nav{
+/* .nav{
     grid-area: nav;
     width: 90%;
     min-height: 70px;
@@ -107,6 +107,142 @@ header{
 
 .direccion{
     display: inline-block;
+} */
+
+.nav{ /*no cambia*/
+    width: 90%;
+    min-height: 70px;
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.direccion{ /*no cambia*/
+    display: inline-block;
+}
+
+.btn-hamburger{
+    width: 25px;
+}
+
+.nav .btn-lupa{
+    width: 25px;
+}
+
+.titulo{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+/*---------------------------------------------------------FIN NAV*/
+
+/*--------------------------------------------INICIO BARRA LATERAL*/
+
+.barra-lateral .nav-barra{ /*CONTENEDOR DE NOMBRE Y HAMBURGER*/
+    width:100%;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.barra-lateral .nav-barra .titulo{
+    color: white;
+    margin: 0 auto;
+}
+
+.barra-lateral .nav-barra .btn-hamburger{
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color:  var(--color-vioFF);
+}
+
+.fondoBtn {
+    background-color:  var(--color-vioFF);
+    border-width: 0;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+.fondoBtn-nav {   
+    border-width: 0;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+ 
+.barra-lateral{                /*CONTENEDOR DE BARRA PRINCIPAl*/
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    background-color: var(--color-vioFF);  
+    left: -90%;
+    z-index: 20;
+}
+
+.barra-lateral ul {
+    list-style: none;
+    padding-top: 30px;    
+}
+
+.barra-lateral ul li{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.barra-lateral ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.barra-lateral li{
+    width: 150px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: var(--color-vioCla); 
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-titulo{
+    display: none;
+}
+
+.nav-buscador{
+    display: none;
+}
+
+.nav-login{
+    display: none;
+}
+
+/*-------------------------------------------------- ANIMACIONES DE DESLIZAR*/
+
+.animacionBarraIz{
+    animation: moverIzquierda 1s ease-in-out normal forwards;
+}
+
+.animacionBarraDr{
+    animation: moverDerecha 1s ease-in-out normal forwards;
+}
+
+@keyframes moverIzquierda{
+    0%{left: 0;}
+    100%{left: -90%;}
+}
+
+@keyframes moverDerecha{
+    0%{left: -90%;}
+    100%{left: 0%;}
 }
 
 /*--------------------------------------------------------- FIN NAV*/
@@ -473,8 +609,180 @@ a{
         width: 70%; 
         height: 208px;
     }
+
+    
 }
 
-@media (max-width:375px){
+@media (min-width:768px) {
+    .nav {
+        display: none;
+    }
+
+    .nav-barra {
+        display: none !important;
+    }
+
+    .nav-titulo {
+        display: block;
+    }
+
+    .nav-buscador {
+        display: flex;
+    }
+
+    .nav-login {
+        display: block;
+    }
+
+
+    .barra-lateral {
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 110%);
+        position: static;
+        grid-area: nav;
+        width: 90%;
+        min-height: 70px;
+        max-width: 1200px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-around;
+        align-items: center;
+        left: 0;
+        animation: none;        
+    }
+
+    .barra-lateral ul {
+        display: none;
+    }
+
+
+    .barra-lateral .nav-titulo {
+        font-family: 'Roboto Slab', serif;
+        font-weight: 300;
+        font-size: 35px;
+    }
+
+    .barra-lateral .nav-buscador {
+        width: 30%;
+        height: 20px;
+        max-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid var(--color-vioCla);
+    }
+
+
+    .barra-lateral .nav-buscador input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    .barra-lateral .nav-buscador button {
+        background-color: white;
+        border-width: 0;
+        border-style: outset;
+        border-color: buttonborder;
+        border-image: initial;
+        border-bottom: 2px solid var(--color-vioCla);
+    }
+
+    .barra-lateral .nav-buscador img {
+        padding-bottom: 1px;
+        width: 16px;
+    }
+
+    .barra-lateral .nav-login a,
+    .barra-lateral .nav-login .barrita {
+        text-decoration: none;
+        color: black;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 400;
+        font-size: 1em;
+    }
+
+    .barra-lateral .nav-login .barrita {
+        color: var(--color-vioFF);
+    }
+
+    .barra-lateral .nav-login .iconoLog {
+        width: 30px;
+        margin-left: 10px;
+    }
+    .contacto .contacto-contenedor p{
+        width: 60%;
+    }
+
+    .contacto .contacto-btn{
+        width: 40%;
+    }
+}
+
+@media (max-width:768px) {
+
+    .btn{
+        min-height: 60px;
+    }
+
+    .btn .btn-contenedor button{
+        font-size: 10px;
+        width: 15%;
+    }
     
+
+    .juegos {
+        min-height: 300px;
+    }
+
+    .juegos-contenedor {
+        max-width: 70vw;
+    }    
+
+    .contacto{
+        min-height: 250px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .contacto .contacto-contenedor{
+        width: 90%; 
+        height: 0px;
+        margin-top: 50px;
+    }
+
+    .contacto .contacto-contenedor p{
+        width: 100%;
+        font-size: 20px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: bold;
+        color: var(--color-vioCla);
+    }
+    
+    .contacto .contacto-btn{        
+        width: 100%;
+        height: 100%; 
+        align-items: center;
+    }
+
+    .contacto .contacto-btn button{
+        margin-top: 100px;
+    }
+}
+
+@media (max-width:516px){
+    .contacto{
+        
+        min-height: 280px;
+    }
+}
+
+@media (min-width:1063px) {
+    .contacto .contacto-contenedor p{
+        width: 60%;
+    }
+
+    .contacto .contacto-btn{
+        width: 40%;
+    }
 }
