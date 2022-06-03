@@ -231,6 +231,13 @@ header {
     border: 2px solid red !important;
 }
 
+.error{ 
+    display: none;  
+    color: red !important;
+    font-size: 10px !important;  
+    margin-top: 0px !important;  
+}
+
 
 /*INICIA ESTILOS DEL FORMULARIO DE CONTACTO*/
 

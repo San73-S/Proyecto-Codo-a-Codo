@@ -43,11 +43,15 @@
 
                     <form action="" id="formu">
                         <div id="formNom"><input type="text" name="nombre" placeholder="Nombre"></div>
+                        <p class="error" id="errNom">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener letras.</p>
                         <div id="formMail"><input type="email" name="mail" placeholder="Email"></div>
+                        <p class="error" id="errMail">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
                         <div id="formTel"><input type="number" name="tel" placeholder="Teléfono"></div>
+                        <p class="error" id="errTel">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
                         <div class="area" id="formArea">
                             <textarea name="mensaje" cols="30" rows="7" placeholder="Mensaje"></textarea>
                         </div>
+                        <p class="error" id="errMens">El Mensaje no puede estar vacio.</p>
                         <input type="submit" value="Enviar">
                     </form>
 

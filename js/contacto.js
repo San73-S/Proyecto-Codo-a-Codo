@@ -22,9 +22,11 @@ const validarFormulario = (e) => {
             if (expreciones.nombre.test(e.target.value)){
                 document.getElementById('formNom').classList.remove('rojo');
                 document.getElementById('formNom').classList.add('vio');
+                document.getElementById('errNom').style.display='none';
                 campos['nombre'] = true;
             } else{
                document.getElementById('formNom').classList.add('rojo');
+               document.getElementById('errNom').style.display='block';
                campos['nombre'] = false;
             }
         break;
@@ -33,9 +35,11 @@ const validarFormulario = (e) => {
             if (expreciones.correo.test(e.target.value)){
                 document.getElementById('formMail').classList.remove('rojo');
                 document.getElementById('formMail').classList.add('vio');
+                document.getElementById('errMail').style.display='none';
                 campos['correo'] = true;
             } else{
                document.getElementById('formMail').classList.add('rojo');
+               document.getElementById('errMail').style.display='block';
                campos['correo'] = false;
             }
         break;
@@ -44,9 +48,11 @@ const validarFormulario = (e) => {
             if (expreciones.telefono.test(e.target.value)){
                 document.getElementById('formTel').classList.remove('rojo');
                 document.getElementById('formTel').classList.add('vio');
+                document.getElementById('errTel').style.display='none';
                 campos['telefono'] = true;
             } else{
                document.getElementById('formTel').classList.add('rojo');
+               document.getElementById('errTel').style.display='block';
                campos['telefono'] = false;
             }
         break;
@@ -56,9 +62,11 @@ const validarFormulario = (e) => {
             if (e.target.value != ""){
                 document.getElementById('formArea').classList.remove('rojo');
                 document.getElementById('formArea').classList.add('vio');
+                document.getElementById('errMens').style.display='none';
                 campos['mensaje'] = true;
             } else{
                document.getElementById('formArea').classList.add('rojo');
+               document.getElementById('errMens').style.display='block';
                campos['mensaje'] = false;
             }
         break;
