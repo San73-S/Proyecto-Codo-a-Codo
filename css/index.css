@@ -448,3 +448,33 @@ a{
     transform: scale(1.1,1.1);
 }
 /*----------------------------------------------------------- FIN FOOTER*/
+
+
+/*MEDIA QUERIS*/
+
+@media (max-width:786px) {
+    .btn{
+        min-height: 80px;
+    }
+
+    .btn .btn-contenedor button{
+        font-size: 13px;
+    }
+
+    .juegos-contenedor {
+        max-width: 70vw;
+    }
+
+    .contacto{
+        min-height: 250px; 
+    }
+
+    .contacto .contacto-contenedor{
+        width: 70%; 
+        height: 208px;
+    }
+}
+
+@media (max-width:375px){
+    
+}
